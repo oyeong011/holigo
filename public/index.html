@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Threads Reader</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="title">Threads Reader</div>
+      <div class="sub" id="feedMeta">로딩 중…</div>
+    </div>
+
+    <div class="controls">
+      <input id="q" type="search" placeholder="검색 (내용/제목) — / 키" autocomplete="off" />
+      <select id="range">
+        <option value="all">전체</option>
+        <option value="7">최근 7일</option>
+        <option value="30">최근 30일</option>
+        <option value="365">최근 1년</option>
+      </select>
+      <button id="openAll" title="현재 필터 결과를 새 탭으로">링크 일괄 열기</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="hint">
+      단축키: <kbd>/</kbd> 검색 포커스 · <kbd>j/k</kbd> 이동 · <kbd>Enter</kbd> 열기 · <kbd>g</kbd> 맨위 · <kbd>Shift+g</kbd> 맨아래
+    </div>
+
+    <section id="grid" class="grid"></section>
+
+    <div class="footer">
+      <button id="more">더 불러오기</button>
+      <div id="status" class="status"></div>
+    </div>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
+
+
+
